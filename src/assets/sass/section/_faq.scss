@@ -1,0 +1,53 @@
+/*==========================================================================
+Faq CSS
+==========================================================================*/
+.faq {
+    &-item {
+        border: 0;
+        border-bottom: 1px solid $border2;
+        background: none;
+        .accordion-button {
+            color: initial;
+            background-color: initial;
+            box-shadow: initial;
+            padding: 22px 0;
+            width: 100% !important;
+            &::after {
+                background-image: url('../../icon/arrow-down.png');
+                width: 18px;
+                height: 18px;
+                background-size: 18px;
+            }
+        }
+        &-card {
+            &-header {  
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                border: none;
+                cursor: pointer;
+                i {
+                    color: $white;
+                    font-size: 35px;
+                }
+                &-content {
+                    padding: 0px 0 40px 0;
+                }          
+            }
+        }
+    }
+}
+@media (max-width: 767px) {
+    .faq {
+        &-item {
+            &-card {
+                &-header {    
+                    h5 {
+                        font-size: 16px;
+                        line-height: 26px;
+                    }         
+                }
+            }
+        }
+    }
+}
